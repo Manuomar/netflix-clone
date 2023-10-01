@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Martel:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            display: flex;
+
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-family: 'Martel', serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background-color: black;
+        }
+
+        .back-img {
+            width: 1510px;
+            filter: brightness(50%);
+        }
+
+        .back {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .cent {
+            position: absolute;
+            top: 260px;
+            left: 130px;
+            font-size: 25px;
+            font-weight: 900;
+            font-family: poppins;
+
+        }
+
+        .cent2 {
+            position: absolute;
+            top: 330px;
+            left: 570px;
+            font-size: 46px;
+            font-weight: 1000;
+            font-family: poppins;
+        }
+
+        .cent3 {
+            position: absolute;
+            top: 410px;
+            left: 570px;
+            font-size: 25px;
+
+            font-family: 'IBM Plex Sans';
+
+        }
+
+        .cent4 {
+            position: absolute;
+            top: 480px;
+            left: 400px;
+            font-size: 1.6rem;
+        }
+
+        .cent5 {
+            position: absolute;
+            top: 516px;
+            left: 480px;
+        }
+
+        .cent6 {
+            position: absolute;
+            top: 528px;
+            left: 812px;
+
+            background-color: #e50914;
+            padding: 7px 17px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            border-radius: 3px;
+            position: absolute;
+            right: 0;
+            /* left: 800px; */
+            /* bottom: -2980px; */
+            width: 200px;
+            font-size: 2rem;
+        }
+
+        .full-logo {
+            margin-top: 8px;
+            margin-left: 16px;
+            width: 190px;
+            position: absolute;
+            bottom: 650px;
+            right: 1250px;
+            top: 4px;
+            left: 180px;
+        }
+
+        .navbar li {
+            margin: 0 50px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .buttons {
+            background-color: #e50914;
+            padding: 7px 17px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            border-radius: 3px;
+            position: absolute;
+            right: 280px;
+            bottom: 731px;
+        }
+
+        select {
+            background-color: transparent;
+            border-color: white;
+
+
+        }
+
+        .border {
+            background: #262626;
+            padding: 5px;
+
+            font-weight: 300;
+            width: 1520px;
+            margin-top: 700px;
+            position: absolute;
+            right: 0;
+            bottom: -43px;
+            left: -20px;
+        }
+
+        .tvimg {
+            margin-top: 2700px;
+            margin-left: 400px;
+            width: 500px;
+            position: absolute;
+            right: 160px;
+            bottom: -460px;
+        }
+
+        .head1 {
+            margin-top: 1600px;
+            color: white;
+            position: absolute;
+            right: 930px;
+            bottom: -260px;
+            /* font-size: 3.3rem;
+             */
+            font-size: 48px;
+        }
+
+        .content {
+            position: absolute;
+            right: 790px;
+            bottom: -350px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .border1 {
+            background: #262626;
+            padding: 5px;
+            font-weight: 300;
+            /* border-radius: 10px; */
+            width: 14000px;
+            position: absolute;
+            right: 0;
+            bottom: -580px;
+        }
+
+        .phone {
+            position: absolute;
+            right: 850px;
+            bottom: -950px;
+            width: 450px;
+        }
+
+        .head2 {
+            margin-top: 1600px;
+            color: white;
+            position: absolute;
+            /* right: 930px; */
+            left: 700px;
+            bottom: -800px;
+            /* font-size: 3.3rem;
+             */
+            font-size: 48px;
+        }
+
+        .content2 {
+            position: absolute;
+            /* right: 790px; */
+            left: 700px;
+            bottom: -880px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .border2 {
+            background: #262626;
+            padding: 5px;
+            font-weight: 300;
+            /* border-radius: 10px; */
+            width: 14000px;
+            position: absolute;
+            right: 0;
+            bottom: -1050px;
+        }
+
+        .device {
+            margin-top: 2700px;
+            margin-left: 400px;
+            width: 600px;
+            position: absolute;
+            right: 160px;
+            bottom: -1600px;
+        }
+
+        .head3 {
+            margin-top: 1600px;
+            color: white;
+            position: absolute;
+            /* right: 930px; */
+            left: 200px;
+            bottom: -1350px;
+            /* font-size: 3.3rem;
+             */
+            font-size: 55px;
+        }
+
+        .content3 {
+            position: absolute;
+            /* right: 790px; */
+            left: 200px;
+            bottom: -1418px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .border3 {
+            background: #262626;
+            padding: 5px;
+            font-weight: 300;
+            /* border-radius: 10px; */
+            width: 14000px;
+            position: absolute;
+            right: 0;
+            bottom: -1640px;
+
+        }
+
+        .kid {
+            margin-top: 2700px;
+            margin-left: 400px;
+            width: 550px;
+            position: absolute;
+            right: 780px;
+            bottom: -2100px;
+        }
+
+        .head4 {
+            margin-top: 1600px;
+            color: white;
+            position: absolute;
+            right: 240px;
+            /* left: 200px; */
+            bottom: -1865px;
+            /* font-size: 3.3rem;
+             */
+            font-size: 55px;
+        }
+
+        .content4 {
+            position: absolute;
+            /* right: 790px; */
+            left: 717px;
+            bottom: -1970px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .border4 {
+            background: #262626;
+            padding: 5px;
+            font-weight: 300;
+            /* border-radius: 10px; */
+            width: 14000px;
+            position: absolute;
+            right: 0;
+            bottom: -2175px;
+
+        }
+
+        .head5 {
+            margin-top: 1600px;
+            color: white;
+            position: absolute;
+            right: 380px;
+            /* left: 200px; */
+            bottom: -2280px;
+            /* font-size: 3.3rem;
+             */
+            font-size: 55px;
+        }
+
+        .border5 {
+            background: #262626;
+            padding: 20px;
+            font-weight: 300;
+            /* border-radius: 10px; */
+            width: 1100px;
+            position: absolute;
+            right: 175px;
+            left: 175px;
+            bottom: -2400px;
+
+        }
+
+        .topic1 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .plus {
+            width: 35px;
+            position: absolute;
+            right: 50px;
+            bottom: 15px;
+        }
+
+        .border6 {
+            background: #262626;
+            padding: 20px;
+            font-weight: 300;
+            width: 1100px;
+            position: absolute;
+            right: 175px;
+            left: 175px;
+            bottom: -2488px;
+        }
+
+        .plus2 {
+            width: 35px;
+            position: absolute;
+            right: 50px;
+            bottom: 15px;
+        }
+
+        .topic2 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .border7 {
+            background: #262626;
+            padding: 20px;
+            font-weight: 300;
+            width: 1100px;
+            position: absolute;
+            right: 175px;
+            left: 175px;
+            bottom: -2576px;
+        }
+
+        .plus3 {
+            width: 35px;
+            position: absolute;
+            right: 50px;
+            bottom: 15px;
+        }
+
+        .topic3 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .border8 {
+            background: #262626;
+            padding: 20px;
+            font-weight: 300;
+
+            width: 1100px;
+            position: absolute;
+            right: 175px;
+            left: 175px;
+            bottom: -2664px;
+        }
+
+        .plus4 {
+            width: 35px;
+            position: absolute;
+            right: 50px;
+            bottom: 15px;
+        }
+
+        .topic4 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .border9 {
+            background: #262626;
+            padding: 20px;
+            font-weight: 300;
+            width: 1100px;
+            position: absolute;
+            right: 175px;
+            left: 175px;
+            bottom: -2752px;
+        }
+
+        .plus5 {
+            width: 35px;
+            position: absolute;
+            right: 50px;
+            bottom: 15px;
+        }
+
+        .topic5 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .border10 {
+            background: #262626;
+            padding: 20px;
+            font-weight: 300;
+            width: 1100px;
+            position: absolute;
+            right: 175px;
+            left: 175px;
+            bottom: -2840px;
+        }
+
+        .plus6 {
+            width: 35px;
+            position: absolute;
+            right: 50px;
+            bottom: 15px;
+        }
+
+        .topic6 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .head6 {
+            font-size: 1.2rem;
+            color: white;
+            position: absolute;
+            right: 0;
+            left: 450px;
+            bottom: -2900px;
+        }
+
+        form input,
+        form textarea {
+            width: 280px;
+            border: 2px;
+            /* outline: none; */
+            background: black;
+            padding: 15px;
+            margin: 15px 0;
+            color: #ffffff;
+            font-size: 1.2rem;
+            border-radius: 6px;
+            border-color: #ffffff;
+
+        }
+
+        form .btn1 {
+            padding: 14px 60px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .mail {
+            position: absolute;
+            right: 0;
+            left: 440px;
+            bottom: -3000px;
+            font-size: 2rem;
+        }
+
+        .start {
+            background-color: #e50914;
+            padding: 7px 17px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            border-radius: 3px;
+            position: absolute;
+            right: 0;
+            left: 800px;
+            bottom: -2980px;
+            width: 200px;
+            font-size: 2rem;
+        }
+
+        .border11 {
+            background: #262626;
+            padding: 5px;
+            font-weight: 300;
+            /* border-radius: 10px; */
+            width: 14000px;
+            position: absolute;
+            right: 0;
+            bottom: -3030px;
+        }
+
+        .last-data {
+            position: absolute;
+            right: 0;
+            left: 170px;
+            bottom: -3300px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        .line1 {
+            display: flex;
+
+        }
+
+        .line2 {
+            display: flex;
+
+        }
+
+        .line3 {
+            display: flex;
+
+        }
+
+        .line4 {
+            display: flex;
+
+        }
+
+        .line5 {
+            display: flex;
+            position: absolute;
+            right: 0;
+
+            /* bottom: -3000px; */
+        }
+
+        .lang {
+            position: absolute;
+            /* right: 200px; */
+            bottom: -1670px;
+            left: 96px;
+            list-style: none;
+            /* filter: brightness(30%); */
+            color: white;
+
+        }
+
+        data-top {
+            position: absolute;
+            right: 250px;
+            bottom: -200px;
+            color: #ffffff;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <img src="IN-en-20230918-popsignuptwoweeks-perspective_alpha_website_large.jpg" class="back-img">
+
+        <img src="Netflix_Logo_PMS.png" class="full-logo">
+        <div class="cent">
+            <h1>The biggest Indian hits. The best Indian stories.All</h1>
+        </div>
+        <div class="cent2">streaming here.</div>
+        <div class="cent3">Watch anywhere. Cancel anytime.</div>
+        <div class="cent4">Ready to watch? Enter your email to create or restart your membership.</div>
+        <form class="cent5"><input type="email" name="email" placeholder="Email address" required></form>
+        <pre><li class="cent6" style="font-family: 'Roboto'; font-weight: 10;">Get Started ></li>
+            </pre>
+        <li class="buttons">Sign In</li>
+    </div>
+
+    <div class="top">
+        <section>
+            <div class="border">
+            </div>
+        </section>
+        <section class="p2" style="margin-top: 1550px;">
+            <h1 class="head1" style="color: white;">Enjoy on your TV</h1>
+            <div class="content">Watch on smart TVs, PlayStation, Xbox,<br> Chromecast,Apple TV, Blu-ray players and
+                more</div>
+            ><div class="tv"><img src="tv.png" class="tvimg"></div>
+        </section>
+        <section>
+            <div class="border1"> </div>
+        </section>
+        <section>
+            <div>
+                <img class="phone" src="mobile-0819.jpg">
+            </div>
+            <div class="1">
+                <h1 class="head2">Download your shows to <br>watch offline</h1>
+                <p class="content2">Save your favourites easily and always have<br> something to watch.</p>
+            </div>
+            <div class="border2"> </div>
+        </section>
+        <section>
+            <div>
+                <img class="device" src="device-pile-in.png">
+            </div>
+            <div>
+                <h1 class="head3">Watch everywhere</h1>
+                <p class="content3">Stream unlimited movies and TV shows on your<br> phone, tablet, laptop, and TV.</p>
+                <div class="border3"> </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <img class="kid"
+                    src="AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png">
+            </div>
+            <div>
+                <h1 class="head4">Create profiles for kids</h1>
+                <p class="content4">Send children on adventures with their favourite<br> characters in a space made just
+                    for them—free with<br> your membership</p>
+                <div class="border4"> </div>
+            </div>
+
+        </section>
+        <section>
+            <div>
+                <h1 class="head5">Frequently Asked Questions</h1>
+                <p></p>
+                <div class="border5">
+                    <h2 class="topic1">What is Netflix?</h2>
+                    <img src="plus.png" class="plus">
+                </div>
+            </div>
+            <div>
+                <p></p>
+                <div class="border6">
+                    <h2 class="topic2">How much does Netflix cost?</h2>
+                    <img src="plus.png" class="plus2">
+                </div>
+                <p></p>
+                <div class="border7">
+                    <h2 class="topic3">Where can I watch?</h2>
+                    <img src="plus.png" class="plus3">
+                </div>
+                <p></p>
+                <div class="border8">
+                    <h2 class="topic4">How do I cancel?</h2>
+                    <img src="plus.png" class="plus4">
+                </div>
+                <p></p>
+                <div class="border9">
+                    <h2 class="topic5">What can I watch on Netflix?</h2>
+                    <img src="plus.png" class="plus5">
+                </div>
+                <p></p>
+                <div class="border10">
+                    <h2 class="topic6">Is Netflix good for kids?</h2>
+                    <img src="plus.png" class="plus6">
+                </div>
+            </div>
+            <p class="head6">Ready to watch? Enter your email to create or restart your membership.</p>
+            <form class="mail"><input type="email" name="email" placeholder="Email address" required></form>
+            <pre><li class="start" style="font-family: 'Roboto'; font-weight: 10;">Get Started ></li>
+            </pre>
+            <div class="border11"> </div>
+        </section>
+        <section>
+            <div class="last-data">
+                <ul>
+                    <li> Questions? call <a href="/">000-800-919-1694
+                            <hr color="white" width="130px" style="margin-left: 115px;">
+                        </a></li>
+                    <br>
+
+                </ul>
+                <ul class="line1">
+                    <li><a href="/">FAQ
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 200px;"><a href="/">Help Centre
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 200px;"><a href="/">Account
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 200px;"><a href="/">Media Centre
+                            <hr color="white">
+                        </a></li>
+                </ul>
+                <br>
+                <ul class="line2">
+                    <li><a href="/">Investor Relations
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 100px;"><a href="/">Jobs
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 250px;"><a href="/">Ways to Watch
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 150px;"><a href="/">Terms to Use
+                            <hr color="white">
+                        </a></li>
+                </ul>
+                <br>
+                <ul class="line3">
+                    <li><a href="/">Privacy
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 175px;"><a href="/">Cookie Preferences
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 145px;"><a href="/">Coporate Information
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 105px;"><a href="/">Contact Us
+                            <hr color="white">
+                        </a></li>
+                </ul>
+                <br>
+                <ul class="line4">
+                    <li><a href="/">Speed Test
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 150px;"><a href="/">Legal Noticess
+                            <hr color="white">
+                        </a></li>
+                    <li style="margin-left: 180px;"><a href="/">Only on Netflix
+                            <hr color="white">
+                        </a></li>
+
+                </ul>
+            </div>
+
+        </section>
+        <br>
+        <br>
+
+        <li class="lang">
+            <select name="language" class="lang" style="color: white;">
+                <option value="en">English</option>
+                <option value="es">Hindi</option>
+            </select>
+        </li>
+
+    </div>
+</body>
+
+</html>
